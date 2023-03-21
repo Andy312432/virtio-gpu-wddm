@@ -2706,9 +2706,10 @@ NTSTATUS VioGpuAdapter::Escape(_In_ CONST DXGKARG_ESCAPE* pEscape)
         pVioGpuEscape->Id = m_Id;
         break;
     }
-    case VIOGPU_GET_CUSTOM_RESOLUTION: {
+    case VIOGPU_GET_CUSTOM_RESOLUTION:
+    case QXL_ESCAPE_SET_CUSTOM_DISPLAY: {
         size = sizeof(VIOGPU_DISP_MODE);
-        if (pVioGpuEscape->DataLength < size) {
+        if (pVioGpuEscape->DataLength < size || pVioGpuEscape->DataLength < sizeof(QXLEscapeSetCustomDisplay)) {
             DbgPrint(TRACE_LEVEL_ERROR, ("%s buffer too small %d, should be at least %d\n", __FUNCTION__,
                 pVioGpuEscape->DataLength, size));
             return STATUS_INVALID_BUFFER_SIZE;
