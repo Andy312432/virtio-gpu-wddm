@@ -128,6 +128,7 @@
     <PlatformToolset>WindowsUserModeDriver10.0</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <ALLOW_DATE_TIME>1</ALLOW_DATE_TIME>
+    <TargetVersion>Windows10</TargetVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>

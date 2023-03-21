@@ -280,6 +280,7 @@
     <ClInclude Include="..\common\bitops.h" />
     <ClInclude Include="..\common\helper.h" />
     <ClInclude Include="driver.h" />
+    <ClInclude Include="qxl_escape.h" />
     <ClInclude Include="trace.h" />
     <ClInclude Include="viogpudo.h" />
     <ClInclude Include="resource.h" />
@@ -302,12 +303,12 @@
   <ItemGroup>
     <Inf Include="viogpudo.inx" />
   </ItemGroup>
-<!--  <ItemGroup Condition="'$(BUILD_RESOLUTIONS_USERMODE)'!=''"> -->
+  <!--  <ItemGroup Condition="'$(BUILD_RESOLUTIONS_USERMODE)'!=''"> -->
   <ItemGroup>
-    <PackOne_Files Include="..\viogpuap\$(OutDir)viogpuap.exe"/>
-    <PackOne_Files Include="..\viogpuap\$(OutDir)viogpuap.pdb"/>
-    <PackOne_Files Include="..\viogpusc\$(OutDir)vgpusrv.exe"/>
-    <PackOne_Files Include="..\viogpusc\$(OutDir)vgpusrv.pdb"/>
+    <PackOne_Files Include="..\viogpuap\$(OutDir)viogpuap.exe" />
+    <PackOne_Files Include="..\viogpuap\$(OutDir)viogpuap.pdb" />
+    <PackOne_Files Include="..\viogpusc\$(OutDir)vgpusrv.exe" />
+    <PackOne_Files Include="..\viogpusc\$(OutDir)vgpusrv.pdb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="$(MSBuildProjectDirectory)\..\..\Tools\Driver.Common.targets" />

@@ -30,6 +30,7 @@
 #pragma once
 
 #include "helper.h"
+#include "qxl_escape.h"
 
 
 #pragma pack(push)
